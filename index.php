@@ -1,17 +1,33 @@
 <?php
+/**
+ * Simple API object with data for test
+ */
 $apiData = (object) [
-    'name' => '<HNK> Hoofddorp',
-    'rating' => 7.9,
-    'review_count' => 50,
+    'name' => 'HNK Hoofddorp',
+    'rating' => 8,
+    'review_count' => 49,
     'url' => 'https://www.deskbookers.com/nl-nl/hoofddorp/hnk-hoofddorp'
 ];
+
+
+/**
+ * String escape function
+ *
+ * @param $value
+ * @param bool $doubleEncode
+ * @return string
+ */
 function safe($value, $doubleEncode = true) {
     return htmlspecialchars( (string) $value, ENT_QUOTES, 'utf-8', $doubleEncode);
 }
 
 
-
-
+/**
+ * Generate widget stars depending on object rating
+ *
+ * @param int $rating
+ * @return string
+ */
 function generateWidgetStars($rating = 0)
 {
     $html = '<div class="stars clearfix">';
@@ -64,50 +80,57 @@ function generateWidgetStars($rating = 0)
 	</head>
 	<body>
 
+        Resize window to see responsiveness of the widget :)<br /><br />
+
+        <!-- BEGIN: HORIZONTAL (DEFAULT) WIDGET -->
         <div class="widget horizontal">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="title"><?php echo safe($apiData->name); ?></div>
                     </div>
-                <div class="col-xs-12 all">
-                    <div class="logo_round">
-                        <img src="img/512.png" alt="" style="width:100%;" />
+                <div class="col-xs-12 review">
+                    <div class="logo">
+                        <img src="img/512.png" alt="Deskbookers" style="width:100%;" />
                     </div>
-                    <div class="review">
+                    <div class="result">
                         <?php echo generateWidgetStars($apiData->rating); ?>
-                        <div class="reviews">Op basis van <?php echo safe($apiData->review_count); ?> reviews</div>
+                        <div class="text">Op basis van <?php echo safe($apiData->review_count); ?> reviews</div>
                     </div>
                 </div>
 
             </div>
             <div class="row logo">
                 <div class="col-xs-6 text">Bekijk reviews op</div>
-                <div class="col-xs-6 img"><img src="img/deskbookers.png" alt="" /></div>
+                <div class="col-xs-6 img"><img src="img/deskbookers.png" alt="Deskbookers" /></div>
             </div>
         </div>
-<br />
-<br />
+        <!-- END: HORIZONTAL (DEFAULT) WIDGET -->
+
+        <br /><br />
+
+        <!-- BEGIN: VERTICAL WIDGET -->
         <div class="widget vertical">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="title"><?php echo safe($apiData->name); ?></div>
                 </div>
-                <div class="col-xs-12 all">
-                    <div class="logo_round">
-                        <img src="img/512.png" alt="" style="width:100%;" />
+                <div class="col-xs-12 review">
+                    <div class="logo">
+                        <img src="img/512.png" alt="Deskbookers" style="width:100%;" />
                     </div>
-                    <div class="review">
+                    <div class="result">
                         <?php echo generateWidgetStars($apiData->rating); ?>
-                        <div class="reviews">Op basis van <?php echo safe($apiData->review_count); ?> reviews</div>
+                        <div class="text">Op basis van <?php echo safe($apiData->review_count); ?> reviews</div>
                     </div>
                 </div>
 
             </div>
             <div class="row logo">
                 <div class="col-xs-6 text">Bekijk reviews op</div>
-                <div class="col-xs-6 img"><img src="img/deskbookers.png" alt="" /></div>
+                <div class="col-xs-6 img"><img src="img/deskbookers.png" alt="Deskbookers" /></div>
             </div>
         </div>
+        <!-- END: VERTICAL WIDGET -->
 
 		<!-- BEGIN: SCRIPTS -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
