@@ -1,0 +1,172 @@
+.widget {
+    border:3px solid #3a3b74;
+    border:1.5vw solid #3a3b74;
+    background-color:#FFF;
+    position:relative;
+    width:100%;
+}
+
+.widget .title {
+    color:#3a3b74;
+    font-size:16px;
+    font-size: 6.1vw;
+    line-height:35px;
+    line-height:13.4vw;
+    text-align: center;
+    background-color:#f0f0f0;
+    margin-bottom:7px;
+    margin-bottom:2.7vw;
+}
+.widget.vertical .title {
+    padding-top:50%;
+    font-size:18px;
+    font-size:8.1vw;
+    background-color:transparent;
+}
+
+
+
+/**
+ * BEGIN: REVIEW
+ */
+
+.widget.vertical .all {
+    position:absolute;
+    top:22%;
+    left:0;
+    margin:0;
+    padding:0;
+}
+.widget.vertical .logo_round {
+    display:none;
+}
+.widget .logo_round,
+.widget .review {
+    float:left;
+}
+.widget .logo_round {
+    padding-left:8px;
+    padding-left:2.5vw;
+    width:20%;
+}
+.widget .review {
+    display:table;
+    width:80%;
+}
+.widget.vertical .review {
+    width:100%;
+}
+.widget .reviews {
+    text-align:center;
+    color:#666666;
+    font-size:11px;
+    font-size: 4.2vw;
+}
+.widget.vertical .reviews {
+    font-size:5vw;
+}
+/**
+ * END: REVIEW
+ */
+
+
+/**
+ * BEGIN: STARS
+ */
+.widget .stars {
+    display: table;
+    margin: 0 auto;
+}
+.widget .star {
+    float:left;
+    font-size:32px;
+    font-size: 12.3vw;
+    line-height:25px;
+    /*padding-right:5px;*/
+    padding-right: 1.5vw;
+    padding-left: 1.5vw;
+}
+.widget .star .fa-star,
+.widget .star .fa-star-half-o {
+    color:#ffb400;
+}
+.widget .star .fa-star-o {
+    color:#bcbbbb;
+}
+
+
+.widget.vertical .stars {
+    margin-bottom:3px;
+    margin-bottom:1.3vw;
+}
+.widget.vertical .star {
+    padding:0;
+    font-size:40px;
+    font-size: 18.1vw;
+    margin-left:-8px;
+    margin-left:-3.6vw;
+    margin-right:-8px;
+    margin-right:-3.6vw;
+}
+.widget.vertical .star_2 {
+    margin:-30px 0 0 0;
+    margin:-13.6vw 0 0 0;
+}
+
+.widget.vertical .star_4 {
+    margin:-30px 0 0 0;
+    margin:-13.6vw 0 0 0;
+}
+/**
+ * END: STARS
+ */
+
+
+/**
+ * BEGIN: LOGO
+ */
+.widget .logo {
+    margin:0;
+    padding:3px 0 7px 0;
+    padding:1.15vw 0 2.7vw 0;
+}
+.widget .logo .text {
+    width:45%;
+    padding-left:8px;
+    padding-left:2.5vw;
+    padding-right:0;
+
+    font-size:13px;
+    font-size: 5vw;
+    color:#3a3b74;
+}
+.widget .logo .img {
+    width:55%;
+    padding-right:8px;
+    padding-right:2.5vw;
+    padding-left:2px;
+    padding-left:1.5vw;
+}
+.widget .logo img {
+    width:100%;
+}
+
+.widget.vertical .logo .text{
+    width:100%;
+    font-size: 6.8vw;
+}
+.widget.vertical .logo .img {
+    width:56%;
+    left:50%;
+    margin-left:-28%;
+}
+.widget.vertical .logo .text,
+.widget.vertical .logo .img {
+    padding:0 8px 0 8px;
+    padding:0 2.5vw 0 2.5vw;
+    text-align:center;
+}
+
+/**
+ * END: LOGO
+ */
